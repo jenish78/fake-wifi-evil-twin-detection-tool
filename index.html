@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Evil Twin Detector</title>
+
+    <link rel="stylesheet" href="/static/style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+</head>
+
+<body>
+    <canvas id="matrixCanvas"></canvas>
+
+<h1>🔐 Evil Twin WiFi Detector </h1>
+
+<p id="modeLabel">🟢 Mode: Windows Real Scan</p>
+<button onclick="toggleTestMode()">🧪 Toggle Test Mode</button>
+
+<p id="modeStatus">Mode: REAL</p>
+<button onclick="fetchData()">🔄 Scan</button>
+<button onclick="enableFirewall()">🛡 Enable Firewall</button>
+<div id="loading" style="display:none;">
+    <p>🔍 Scanning networks...</p>
+</div>
+
+<table id="wifiTable"></table>
+
+<h2>📊 Signal Graph</h2>
+<canvas id="chart"></canvas>
+
+<h2>🗺 Map</h2>
+<div id="map" style="height:400px;"></div>
+
+<script src="/static/script.js"></script>
+
+<audio id="alertSound">
+    <source src="https://www.soundjay.com/buttons/beep-07.wav" type="audio/wav">
+</audio>
+</body>
+</html>

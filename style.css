@@ -1,0 +1,64 @@
+body {
+    background: #111;
+    color: white;
+    text-align: center;
+    font-family: Arial;
+}
+
+table {
+    margin: auto;
+    width: 80%;
+    border-collapse: collapse;
+}
+
+td,
+th {
+    border: 1px solid white;
+    padding: 10px;
+}
+
+button {
+    padding: 10px;
+    background: green;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#modeLabel {
+    color: #00ff00;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+#matrixCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+#loading {
+    color: #00ff00;
+    font-size: 18px;
+    margin-top: 10px;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.3;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+#modeStatus {
+    font-size: 16px;
+    margin: 10px;
+    color: yellow;
+}
